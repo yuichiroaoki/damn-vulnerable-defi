@@ -31,10 +31,3 @@ export const impersonateFundErc20 = async (contract: Contract, sender: string, r
     params: [sender],
   });
 };
-
-export const BentoBoxBalance = async (bentobox: Contract, token: string, account: string): Promise<string> => {
-  const amount: string = bentobox.balanceOf(token, account).then((balance: BigNumber) => {
-    return utils.formatUnits(balance, 18);
-  });
-  return amount;
-};
