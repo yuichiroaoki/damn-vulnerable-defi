@@ -1,6 +1,6 @@
-# Smart Contract Dev Template
+# Typescript implementation of Damn Vulnerable Defi
 
-Template for smart contract development using Typescript & Hardhat
+Damn Vulnerable Defi using Typescript & Hardhat
 
 ## Available Scripts
 
