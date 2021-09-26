@@ -2,6 +2,9 @@
 
 Damn Vulnerable Defi using Typescript & Hardhat
 
+[Damn Vulnerable Defi Website](https://www.damnvulnerabledefi.xyz/index.html)
+[GitHub](https://github.com/OpenZeppelin/damn-vulnerable-defi)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -44,4 +47,5 @@ Show an account's balance
 
 ## References
 
-https://hardhat.org/guides/create-task.html
+* https://hardhat.org/guides/create-task.html
+* https://github.com/iphelix/damn-vulnerable-defi
