@@ -10194,35 +10194,6 @@ resolve@1.17.0:
   languageName: node
   linkType: hard
 
-"solidity-examples@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "solidity-examples@workspace:."
-  dependencies:
-    "@nomiclabs/hardhat-ethers": ^2.0.2
-    "@nomiclabs/hardhat-etherscan": ^2.1.2
-    "@nomiclabs/hardhat-waffle": ^2.0.1
-    "@openzeppelin/contracts": 3.0.0
-    "@typechain/ethers-v5": ^7.0.1
-    "@typechain/hardhat": ^2.1.2
-    "@types/chai": ^4.2.18
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.12.2
-    chai: ^4.3.4
-    dotenv: ^10.0.0
-    ethereum-waffle: ^3.4.0
-    ethers: ^5.0.0
-    hardhat: ^2.3.3
-    husky: ^7.0.2
-    lint-staged: ^11.1.2
-    prettier: 2.4.1
-    solidity-coverage: ^0.7.16
-    ts-generator: ^0.1.1
-    ts-node: ^10.0.0
-    typechain: ^5.1.1
-    typescript: ^4.3.2
-  languageName: unknown
-  linkType: soft
-
 "source-map-resolve@npm:^0.5.0":
   version: 0.5.3
   resolution: "source-map-resolve@npm:0.5.3"
@@ -11107,6 +11078,35 @@ resolve@1.17.0:
   checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
   languageName: node
   linkType: hard
+
+"typescript-damn-vulnerable-defi@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "typescript-damn-vulnerable-defi@workspace:."
+  dependencies:
+    "@nomiclabs/hardhat-ethers": ^2.0.2
+    "@nomiclabs/hardhat-etherscan": ^2.1.2
+    "@nomiclabs/hardhat-waffle": ^2.0.1
+    "@openzeppelin/contracts": 3.0.0
+    "@typechain/ethers-v5": ^7.0.1
+    "@typechain/hardhat": ^2.1.2
+    "@types/chai": ^4.2.18
+    "@types/mocha": ^8.2.2
+    "@types/node": ^15.12.2
+    chai: ^4.3.4
+    dotenv: ^10.0.0
+    ethereum-waffle: ^3.4.0
+    ethers: ^5.0.0
+    hardhat: ^2.3.3
+    husky: ^7.0.2
+    lint-staged: ^11.1.2
+    prettier: 2.4.1
+    solidity-coverage: ^0.7.16
+    ts-generator: ^0.1.1
+    ts-node: ^10.0.0
+    typechain: ^5.1.1
+    typescript: ^4.3.2
+  languageName: unknown
+  linkType: soft
 
 typescript@^4.3.2:
   version: 4.4.3

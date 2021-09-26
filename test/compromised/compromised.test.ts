@@ -1,7 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
-import { ethers, network } from "hardhat";
+import { ethers, run, network } from "hardhat";
 import {
     DamnValuableNFT,
     DamnValuableNFT__factory,
@@ -124,10 +124,12 @@ describe('Compromised challenge', () => {
         await postPrice(EXCHANGE_INITIAL_ETH_BALANCE);
         console.log("DVNFT Price:", ethers.utils.formatEther(await Oracle.getMedianPrice("DVNFT")), "ETH");
 
+		run("balance", {account: attacker.address})
         // Approve transfer and sell token for the new price
         await Token.connect(attacker).approve(Exchange.address, 1);
         await Exchange.connect(attacker).sellOne(1);
-
+        await attacker.getBalance()
+		run("balance", {account: attacker.address})
     });
 
     after(async function () {
