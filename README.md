@@ -49,3 +49,4 @@ Show an account's balance
 
 * https://hardhat.org/guides/create-task.html
 * https://github.com/iphelix/damn-vulnerable-defi
+* https://iphelix.medium.com/damn-vulnerable-defi-challenge-7-walkthrough-ee9fac3fdcd4

