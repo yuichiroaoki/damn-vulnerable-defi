@@ -57,8 +57,9 @@ describe("[Challenge] Side entrance", () => {
 		// because it'll depend on how much gas the attacker spends in the attack
 		// If there were no gas costs, it would be balance before attack + ETHER_IN_POOL
 		expect(
-			await provider.getBalance(attacker.address)
-		).to.not.eq(attackerInitialEthBalance);
+			(await provider.getBalance(attacker.address))
+			.gt(attackerInitialEthBalance)
+		).to.be.true;
 		run("balance", {account: attacker.address})
 	});
 });

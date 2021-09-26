@@ -26,7 +26,7 @@ describe('Compromised challenge', () => {
     const provider = ethers.provider;
     let owner: SignerWithAddress;
     let attacker: SignerWithAddress;
-    let Token: DamnValuableNFT;
+    let NFT: DamnValuableNFT;
     let Oracle: TrustfulOracle;
     let Exchange: Exchange;
     let initialAttackerbalance: BigNumber;
@@ -83,7 +83,8 @@ describe('Compromised challenge', () => {
             "DamnValuableNFT",
             owner
         )) as DamnValuableNFT__factory;
-        Token = nft.attach(await Exchange.token());
+        // get an instance of a Contract attached to address
+        NFT = nft.attach(await Exchange.token());
 
         // Keep track of attacker's initial ETH balance
         initialAttackerbalance = await attacker.getBalance();
@@ -126,7 +127,7 @@ describe('Compromised challenge', () => {
 
 		run("balance", {account: attacker.address})
         // Approve transfer and sell token for the new price
-        await Token.connect(attacker).approve(Exchange.address, 1);
+        await NFT.connect(attacker).approve(Exchange.address, 1);
         await Exchange.connect(attacker).sellOne(1);
         await attacker.getBalance()
 		run("balance", {account: attacker.address})
